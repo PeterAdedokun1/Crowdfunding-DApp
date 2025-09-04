@@ -1,12 +1,49 @@
-# React + Vite
+What This Crowdfunding dApp Does
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Smart Contracts (On-Chain Logic)
 
-Currently, two official plugins are available:
+Crowdfunding contract
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Accepts ETH contributions from anyone.
 
-## Expanding the ESLint configuration
+Keeps track of how much each user contributed.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Automatically gives rewards in tokens (RWD) to contributors.
+
+Allows only the project owner to withdraw the total funds raised.
+
+RewardToken contract (ERC20 token)
+
+A custom token (RWD) that acts as a reward for contributors.
+
+1 ETH = 100 RWD (minted automatically when funding).
+
+Ownership of the token is transferred to the Crowdfunding contract so it alone can mint new tokens fairly.
+
+Frontend (React + Ethers.js)
+
+Users can connect their MetaMask wallet to the dApp.
+
+Shows:
+
+Connected wallet address.
+
+Total ETH raised so far.
+
+User’s personal contribution amount.
+
+User’s reward balance (RWD tokens earned).
+
+Provides actions:
+
+Contribute ETH to the project.
+
+Withdraw funds (only visible/usable by the contract owner).
+
+Security & Ownership
+
+Only the Crowdfunding contract can mint reward tokens.
+
+Only the project owner (the deployer of Crowdfunding) can withdraw raised ETH.
+
+All contributions and rewards are stored transparently on-chain, so users can trust the system.
