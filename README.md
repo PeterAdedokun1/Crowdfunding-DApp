@@ -16,7 +16,7 @@ RewardToken contract (ERC20 token)
 
 A custom token (RWD) that acts as a reward for contributors.
 
-1 ETH = 100 RWD (minted automatically when funding).
+
 
 Ownership of the token is transferred to the Crowdfunding contract so it alone can mint new tokens fairly.
 
