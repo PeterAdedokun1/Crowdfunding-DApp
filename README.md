@@ -1,12 +1,24 @@
-# React + Vite
+🚀 Crowdfunding DApp
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A decentralized crowdfunding platform powered by Ethereum smart contracts.
+Contributors fund a project with ETH and automatically receive Reward Tokens (RWD) as proof of contribution.
 
-Currently, two official plugins are available:
+This project demonstrates the combination of ERC20 tokens and crowdfunding mechanics, with a simple React frontend for interaction.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+✨ Features
 
-## Expanding the ESLint configuration
+🔗 Wallet Connection (MetaMask)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+💰 Fund a Project with ETH
+
+🎁 Reward System — contributors earn RWD tokens (1 ETH = 100 RWD)
+
+📊 Track Stats
+
+Total raised ETH
+
+User contribution in ETH
+
+User RWD token balance
+
+🏦 Owner Withdraw — project owner can withdraw all raised ETH

@@ -7,8 +7,8 @@ const crowdfundingABI = crowdfundingArtifact.output.abi;
 const rewardTokenABI = rewardTokenArtifact.output.abi;
 
 // Replace with your deployed addresses
-const crowdfundingAddress = "0xa5BBA8b75A91c9826916C9331b42151D7eDd1e37";
-const rewardTokenAddress = "0x2db7e8F6daDb203f17e9aF2b26673F047a74ad93";
+const crowdfundingAddress = import.meta.env.VITE_CROWDFUNDING_ADDRESS
+const rewardTokenAddress = import.meta.env.VITE_REWARD_ADDRESS
 
 export default function CrowdfundingApp() {
   const [account, setAccount] = useState(null);
@@ -67,8 +67,8 @@ export default function CrowdfundingApp() {
   }, [account, contract]);
 
   return (
-    <div className="p-6 max-w-md mx-auto shadow-lg rounded-lg bg-white">
-      <h1 className="text-2xl font-bold mb-4">🚀 Crowdfunding DApp</h1>
+    <div className="">
+      <h1 className="">🚀 Crowdfunding DApp</h1>
 
       {!account ? (
         <button onClick={connectWallet} className="bg-blue-500 text-white px-4 py-2 rounded">
@@ -87,6 +87,7 @@ export default function CrowdfundingApp() {
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
             className="border p-2 w-full my-2"
+                    style={{border: "none", outline: "1px solid gray", marginRight: 10, padding: 5, borderRadius: "5px"}}
           />
           <button onClick={fundProject} className="bg-green-500 text-white px-4 py-2 rounded">
             Fund Project
